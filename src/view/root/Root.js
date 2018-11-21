@@ -4,6 +4,7 @@ import { View } from 'react-native';
 import { generateStylesSelector } from 'common/selectors';
 import CreateScheduleScreen from 'view/screens/CreateScheduleScreen';
 import HomeScreen from 'view/screens/HomeScreen';
+import SignupScreen from 'view/screens/SignupScreen';
 import { createStackNavigator } from 'react-navigation';
 
 function generateStyles(theme) {
@@ -13,10 +14,11 @@ function generateStyles(theme) {
 const RootStack = createStackNavigator(
   {
     Home: HomeScreen,
+    Signup: SignupScreen,
     Details: CreateScheduleScreen,
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'Signup',
   }
 );
 class Root extends Component {

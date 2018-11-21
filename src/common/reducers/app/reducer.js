@@ -1,7 +1,14 @@
 import { combineReducers } from 'redux';
 import * as ActionTypes from './actionTypes';
 
-function test(state = {}, actions) {
-  return state;
+
+function name(state='',action) {
+  switch (action.type) {
+    case ActionTypes.UPDATE_NAME:
+      return action.name;
+    default:
+      return state;
+  }
 }
-export default combineReducers({ test });
+
+export default combineReducers({ name });

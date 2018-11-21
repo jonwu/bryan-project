@@ -4,8 +4,10 @@ import { PersistGate } from 'redux-persist/integration/react';
 import configureStore from 'common/store/configureStore';
 import Root from 'view/root/Root';
 
+
 const { store, persistor } = configureStore();
 const onBeforeLift = () => {
+
 };
 
 class App extends React.Component {
